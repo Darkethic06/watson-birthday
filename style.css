@@ -75,10 +75,12 @@ span {
         padding: 0.5rem;
         flex-direction: column;
     }
+
     .head {
         font-size: 25px;
         text-align: center;
     }
+
     .time {
         font-size: 25px;
         color: #7978FF;
@@ -89,7 +91,9 @@ span {
         margin-top: 0.5rem;
         font-size: 16px;
     }
-.btn{
-    margin-top: 2rem;
-}
+
+
+    .btn {
+        margin-top: 2rem;
+    }
 }
