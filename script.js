@@ -38,15 +38,12 @@ let a = setInterval(() => {
     let leftDays = Math.floor(leftDiff / (1000 * 60 * 60 * 24))
 
     let leftHours = Math.floor((leftDiff / (1000 * 60 * 60 )))
-    let leftMin = Math.floor((leftDiff / (1000 * 60 * 60)))
+    let leftMin = Math.floor((leftDiff / (1000 * 60)))
 
     var leftSec = Math.floor((leftDiff / (1000)))
-
-    // console.log(leftDays, leftHours, leftMin, leftSec);
+   
     document.getElementById('leftMonth').innerHTML = leftMonth + " Months"
-
     document.getElementById('leftWeek').innerHTML = leftWeek + " Weeks"
-
     document.getElementById('leftDays').innerHTML = leftDays + " Days "
     document.getElementById('leftHours').innerHTML = leftHours + " Hours"
     document.getElementById('leftMin').innerHTML = leftMin + " Mintues"
