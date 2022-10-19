@@ -7,27 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js" integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <div class="box">
         <h1 class="head">Welcome Dipanwita, It's only Made for You</h1>
-        <br>
-        <center style="font-size:18px ;"> 
-            <!-- 21 years 11 months 11 days -->
-            <span id="leftYTD"></span>
-            <!-- <br> 263 months 11 days -->
-            <br> <span id="leftMonth"></span>
-            <br> <span id="leftWeek"></span>
-            <br> <span id="leftDays"></span>
-            <br> <span id="leftHours"></span>
-            <!-- <br> 192,360 hours -->
-            <!-- <br> 11,541,600 minutes -->
-            <br><span id="leftMin"></span>
-           <br><span id="leftSec"></span>
+
+        <center style="font-size:18px ;">
+            <span id="leftYTD"></span>,&nbsp;<span id="leftMonth"></span>,&nbsp;<span id="leftWeek"></span>,&nbsp;<span id="leftDays"></span>,&nbsp;<span id="leftHours"></span>,&nbsp;<span id="leftMin"></span>,&nbsp;<span id="leftSec"></span>
         </center>
-        <h2 class="head">Birthday Counting</h2>
-        <br>
+        <br> 
+        <h2 class="subhead">🎂Birthday Counting🎂</h2>
         <div class="times">
 
             <h2 class="time" id="days">
@@ -49,11 +40,17 @@
         </div>
         <button class="btn" id="btn">Click Me on Nov 7</button>
     </div>
+    <!-- <audio  type="audio/mpeg" autoplay loop onplay="handlePlay(event)" >
+        <source src= >
 
-    <audio loop autoplay>
-        <source src="assets/audio.mp3" type="audio/mpeg">
-        
-      </audio>
+    </audio> -->
+
+    <!-- <iframe src="assets/audio.mp3"  frameborder="0" allow="sound 'assets/audio.mp3'"></iframe> -->
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+
+
+
 
     <script src="script.js"></script>
 </body>
