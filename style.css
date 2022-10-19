@@ -19,7 +19,8 @@ body {
     font-size: 45px;
     color: #041C32;
 }
-.subhead{
+
+.subhead {
     font-size: 35px;
     color: #041C32;
 }
@@ -70,6 +71,15 @@ body {
     transform: scale(0.95);
 }
 
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000000;
+}
+
 @media (max-width:440px) {
     .box {
         margin-top: 10rem;
@@ -100,5 +110,8 @@ body {
         margin-top: 2rem;
     }
 }
-/* //////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////// photo effect */
+
+
 

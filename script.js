@@ -1,3 +1,6 @@
+var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
 
 
 
@@ -60,5 +63,5 @@ let a = setInterval(() => {
 
 }, 1000);
 
+// ----------------------------------------
 
-// 3600 *1000 = 3600000 /1000 
