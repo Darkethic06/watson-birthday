@@ -83,10 +83,12 @@ body {
 @media (max-width:440px) {
     .subhead {
         font-size: 28px;
-        
+    }
+    #elem{
+        font-size: 25px;
     }
     .box {
-        margin-top: 10rem;
+        margin-top: 6rem;
 
         width: 100%;
         padding: 0.5rem;
