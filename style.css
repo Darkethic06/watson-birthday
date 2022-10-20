@@ -81,6 +81,10 @@ body {
 }
 
 @media (max-width:440px) {
+    .subhead {
+        font-size: 28px;
+        
+    }
     .box {
         margin-top: 10rem;
 

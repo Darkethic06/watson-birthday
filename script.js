@@ -65,3 +65,9 @@ let a = setInterval(() => {
 
 // ----------------------------------------
 
+var typed6 = new Typed('#elem', {
+    strings: ['Dipanwita','Watson'],
+    typeSpeed: 60,
+    backSpeed: 60,
+    loop: true
+  });
