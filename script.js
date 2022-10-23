@@ -71,3 +71,7 @@ var typed6 = new Typed('#elem', {
     backSpeed: 60,
     loop: true
   });
+
+
+
+
