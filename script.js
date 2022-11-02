@@ -7,7 +7,7 @@ var confettiSettings = { target: 'my-canvas' };
 //   //////////////////////////////////////////////
 
 let x = setInterval(() => {
-    let dest = new Date('Mon Nov 6 2022 00:00:01').getTime();
+    let dest = new Date('Mon Nov 7 2022 00:00:01').getTime();
     let now = new Date().getTime();
 
     let diff = dest - now;
