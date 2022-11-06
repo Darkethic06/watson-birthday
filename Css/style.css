@@ -65,6 +65,7 @@ body {
     transition-duration: 0.5s;
     transition-property: all;
     border-radius: 20px;
+    text-decoration:none ;
 }
 
 .btn:active{
@@ -87,6 +88,13 @@ body {
     color: #7978FF;
     margin-top: 2rem;
 }
+
+
+
+
+
+
+
 
 @media (max-width:440px) {
     .subhead {
@@ -124,7 +132,7 @@ body {
     }
 }
 
-/* //////////////////////////////////////////////// photo effect */
+/* //////////////////////////////////////////////// Wish*/
 
 
 
