@@ -19,7 +19,11 @@ body {
     font-size: 45px;
     color: #041C32;
 }
-
+.head1 {
+    /* margin-top: 5rem; */
+    font-size: 45px;
+    color: #041C32;
+}
 .subhead {
     font-size: 35px;
     color: #041C32;
