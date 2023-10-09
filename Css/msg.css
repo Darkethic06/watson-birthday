@@ -68,7 +68,7 @@ body {
     position: absolute;
     right: 20%;
     bottom: 0;
-    width: 54%;
+    width: 62%;
     height: 80%;
     background: var(--primary);
     transition: all 1s ease-in-out;
@@ -120,7 +120,7 @@ body {
 }
 
 .flap > .envelope .letter{
-    bottom: 100px;
+    bottom: 192px;
     transform: scale(1.5);
     transition-delay: 1s;
 }
