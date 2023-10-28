@@ -77,5 +77,5 @@ var typed6 = new Typed('#elem', {
 
 document.getElementById("waitmsg").addEventListener("click", function (e) {
     e.preventDefault();
-    alert("Why are You Clicking me Now?")
+    alert("Why are you clicking me Now? 😡")
 })
