@@ -1,6 +1,6 @@
 var confettiSettings = { target: 'my-canvas' };
-    var confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
 
 
 
@@ -29,9 +29,9 @@ let x = setInterval(() => {
 }, 1000);
 
 
-document.getElementById("btn").addEventListener("click", function () {
-    alert("Please Click Me On November 7");
-})
+// document.getElementById("btn").addEventListener("click", function () {
+//     alert("Please Click Me On November 7");
+// })
 
 
 // let a = setInterval(() => {
@@ -66,12 +66,16 @@ document.getElementById("btn").addEventListener("click", function () {
 // ----------------------------------------
 
 var typed6 = new Typed('#elem', {
-    strings: ['Dipanwita','Watson'],
+    strings: ['Dipanwita', 'Watson'],
     typeSpeed: 60,
     backSpeed: 60,
     loop: true
-  });
+});
 
 
 
 
+document.getElementById("waitmsg").addEventListener("click", function (e) {
+    e.preventDefault();
+    alert("Why are You Clicking me Now?")
+})
