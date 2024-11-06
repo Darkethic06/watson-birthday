@@ -24,6 +24,10 @@ body {
     font-size: 45px;
     color: #041C32;
 }
+.wish-msg{
+    font-size: 23px;
+    text-align: center;
+}
 .subhead {
     font-size: 35px;
     color: #041C32;
@@ -108,7 +112,7 @@ body {
         font-size: 25px;
     }
     .box {
-        margin-top: 6rem;
+        margin-top: 3rem;
         width: 100%;
         padding: 0.5rem;
         flex-direction: column;
@@ -117,6 +121,7 @@ body {
     .head {
         font-size: 25px;
         text-align: center;
+        height: 60px;
     }
 
     .time {
@@ -138,6 +143,28 @@ body {
 }
 
 /* //////////////////////////////////////////////// Wish*/
+
+
+
+.cute-frame {
+    display: inline-block;
+    padding: 10px;
+    border: 3px solid pink;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff0f5; /* light pink background */
+    margin-top: 2rem;
+}
+
+.cute-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    height: 60vh;
+}
+
 
 
 
