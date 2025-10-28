@@ -1,69 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎂Happy Birthday 🎂</title>
-    <link rel="stylesheet" href="Css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"
-        integrity="sha512-+wqa4/aOL4vwhL637A4p+6epqhUHDqpEfYJa1+PlzlMf908CSOb3xtIeKwZWh5Q0Q/R2nYUKxH4vvcQg+k8KKQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Countdown</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    animation: fadeInDown 1.5s ease-in-out;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+
+  .countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    animation: fadeInUp 2s ease-in-out;
+  }
+
+  .time-box {
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+
+  .time-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .time {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    opacity: 0.9;
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ✨ Glowing Particles */
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 8s linear infinite;
+    box-shadow: 0 0 10px 2px rgba(255,255,255,0.6);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
+    }
+    25% { opacity: 1; }
+    100% {
+      transform: translateY(-20vh) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  /* ✨ Confetti effect */
+  .confetti {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: hsl(calc(360 * var(--hue)), 80%, 60%);
+    top: -10px;
+    left: calc(var(--x) * 1vw);
+    opacity: 0.8;
+    animation: fall 5s linear infinite;
+    transform: rotate(45deg);
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .countdown {
+      gap: 10px;
+    }
+    .time-box {
+      width: 90px;
+      padding: 15px;
+    }
+  }
+</style>
 </head>
 
 <body>
-    <div class="box">
-        <h1 class="head">Welcome <span id="elem"></span>, It's Only For You <br></h1>
+  <h1>🎉 Countdown to Watson’s Birthday 🎂</h1>
 
-        <!-- <center style="font-size:18px ;">
-            <span id="leftYTD"></span>,&nbsp;<span id="leftMonth"></span>,&nbsp;<span id="leftWeek"></span>,&nbsp;<span
-                id="leftDays"></span>,&nbsp;<span id="leftHours"></span>,&nbsp;<span id="leftMin"></span>,&nbsp;<span
-                id="leftSec"></span>
-        </center> -->
-        <br>
-
-
-        <h2 class="subhead">I want to grow old with you</h2>
-        <div class="times">
-
-            <h2 class="time" id="days">
-
-            </h2> <span class="td">Days</span>
-            &nbsp;&nbsp;&nbsp;
-            <h2 class="time" id="hours">
-
-            </h2><span class="td">Hours</span>
-            &nbsp;&nbsp;&nbsp;
-            <h2 class="time" id="min">
-
-            </h2><span class="td">Minutes</span>
-            &nbsp;&nbsp;&nbsp;
-            <h2 class="time" id="sec">
-
-            </h2><span class="td">Seconds</span>
-            &nbsp;&nbsp;&nbsp;
-            <br>
-            <br>
-            
-
-            <!-- <h1 class="wish-msg">Happy Birthday to the most beautiful lady in the universe!</h1> -->
-        </div>
-        <!-- <h2 class="subhead">Left, For your Birthday</h2> -->
-        <!-- <a href="message-for-you.html" class="msg-anchor">A Message For You</a> -->
-        <!-- <a class="btn" href="message-for-you.html">Sorry for being Late! This is For you</a> -->
-        <!-- <a class="btn" href="/wish.html"">Read Here</a> -->
-        <!-- <a class="btn" href="/surprise.html"">Open Surprise</a> -->
+  <div class="countdown">
+    <div class="time-box">
+      <div class="time" id="days">00</div>
+      <div class="label">Days</div>
     </div>
-    <audio autoplay loop>
-        <source src="assets/audio.mp3" type="audio/mpeg">
-    </audio>
+    <div class="time-box">
+      <div class="time" id="hours">00</div>
+      <div class="label">Hours</div>
+    </div>
+    <div class="time-box">
+      <div class="time" id="minutes">00</div>
+      <div class="label">Minutes</div>
+    </div>
+    <div class="time-box">
+      <div class="time" id="seconds">00</div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
 
+  <script>
+    // ✨ Create glowing particles
+    for (let i = 0; i < 25; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.animationDelay = Math.random() * 5 + 's';
+      particle.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(particle);
+    }
 
-    <canvas id="my-canvas"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="scripts/index.min.js"></script>
-    <script src="script.js"></script>
+    // 🎊 Confetti shimmer
+    for (let i = 0; i < 15; i++) {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.setProperty('--x', Math.random() * 100);
+      confetti.style.setProperty('--hue', Math.random());
+      confetti.style.animationDelay = Math.random() * 3 + 's';
+      document.body.appendChild(confetti);
+    }
+
+    // 🎂 Set birthday date
+    const birthday = new Date("2025-11-07T00:00:00").getTime();
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.querySelector(".countdown").innerHTML = "<h2>🎉 Happy Birthday Arijit! 🥳</h2>";
+      }
+    }, 1000);
+  </script>
 </body>
-
 </html>
