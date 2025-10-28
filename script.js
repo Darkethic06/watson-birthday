@@ -7,7 +7,7 @@ confetti.render();
 //   //////////////////////////////////////////////
 
 let x = setInterval(() => {
-    let dest = new Date('Mon Nov 7 2024 00:00:01').getTime();
+    let dest = new Date('Mon Nov 7 2025 00:00:01').getTime();
     let now = new Date().getTime();
 
     let diff = dest - now;
