@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,12 +46,15 @@
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.8;
             }
+
             90% {
                 opacity: 0.8;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
@@ -77,6 +81,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -274,9 +279,12 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.1);
             }
@@ -308,6 +316,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Floating Hearts Background -->
     <div class="hearts" id="hearts"></div>
@@ -317,13 +326,8 @@
         <div class="landing-page">
             <h1>💕 Happy Valentine's Day 💕</h1>
             <p>Enter the secret password to continue...</p>
-            <input 
-                type="password" 
-                class="password-input" 
-                id="passwordInput" 
-                placeholder="Enter password..."
-                autocomplete="off"
-            >
+            <input type="password" class="password-input" id="passwordInput" placeholder="Enter password..."
+                autocomplete="off">
             <button class="btn" onclick="checkPassword()">Enter</button>
             <p class="error" id="errorMsg"></p>
         </div>
@@ -336,28 +340,30 @@
             <div class="photo-grid" id="photoGrid">
                 <!-- Photo placeholders - replace with your actual images -->
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder">
+                        <img src="images/1.jpeg" alt="" srcset="">
+                    </div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/2.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/3.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/4.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/5.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/6.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/7.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Add Your Photo Here<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/8.jpg" alt="" srcset=""></div>
                 </div>
             </div>
             <button class="btn" onclick="showQuiz()">💝 Take the Quiz 💝</button>
@@ -384,29 +390,29 @@
             <h1>🎉 Yay! You Said Yes! 🎉</h1>
             <div class="rose-container">🌹</div>
             <p class="final-message">4 Years Together<br>Many More to Go! 💕</p>
-            
+
             <div class="photo-grid" style="margin-top: 40px;">
                 <!-- Final celebration photos -->
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 1<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/2.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 2<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/3.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 3<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/4.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 4<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/5.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 5<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/6.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="photo-item">
-                    <div class="photo-placeholder">Memory 6<br>(Replace with actual image)</div>
+                    <div class="photo-placeholder"><img src="images/7.jpg" alt="" srcset=""></div>
                 </div>
             </div>
-            
+
             <p style="margin-top: 40px; font-size: 24px; color: #e91e63;">
                 I Love You! ❤️
             </p>
@@ -418,7 +424,7 @@
         function createHearts() {
             const heartsContainer = document.getElementById('hearts');
             const heartSymbols = ['❤️', '💕', '💖', '💗', '💝', '💘'];
-            
+
             for (let i = 0; i < 20; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
@@ -436,7 +442,7 @@
         function checkPassword() {
             const password = document.getElementById('passwordInput').value;
             const errorMsg = document.getElementById('errorMsg');
-            
+
             if (password.toLowerCase() === 'iloveyou') {
                 showPage('galleryPage');
                 errorMsg.textContent = '';
@@ -447,7 +453,7 @@
         }
 
         // Allow Enter key to submit password
-        document.getElementById('passwordInput').addEventListener('keypress', function(event) {
+        document.getElementById('passwordInput').addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
                 checkPassword();
             }
@@ -471,4 +477,5 @@
         }
     </script>
 </body>
+
 </html>
