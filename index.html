@@ -162,61 +162,8 @@
         <source src="assets/audio.mp3" type="audio/mpeg">
     </audio>
 
-  <script>
-    // ✨ Glowing Particles
-    for (let i = 0; i < 25; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      particle.style.left = Math.random() * 100 + 'vw';
-      particle.style.animationDelay = Math.random() * 5 + 's';
-      particle.style.animationDuration = 5 + Math.random() * 5 + 's';
-      document.body.appendChild(particle);
-    }
 
-    // 🎊 Confetti shimmer
-    for (let i = 0; i < 15; i++) {
-      const confetti = document.createElement('div');
-      confetti.classList.add('confetti');
-      confetti.style.setProperty('--x', Math.random() * 100);
-      confetti.style.setProperty('--hue', Math.random());
-      confetti.style.animationDelay = Math.random() * 3 + 's';
-      document.body.appendChild(confetti);
-    }
+    <script src="js/script.js"></script>
 
-    // 🎂 Countdown
-    const birthday = new Date("2025-11-07T00:00:00").getTime();
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = birthday - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days.toString().padStart(2, '0');
-      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-      if (distance < 0) {
-        clearInterval(countdown);
-        document.querySelector(".countdown").innerHTML = "<h2>🎉 Happy Birthday Arijit! 🥳</h2>";
-      }
-    }, 1000);
-
-    // 🔊 Audio Permission Logic
-    const audio = document.getElementById("birthdayAudio");
-    const permissionBox = document.getElementById("audio-permission");
-    const playBtn = document.getElementById("playBtn");
-
-    playBtn.addEventListener("click", () => {
-      audio.play().then(() => {
-        permissionBox.style.display = "none";
-      }).catch(err => {
-        alert("Unable to play audio automatically. Please check browser settings.");
-      });
-    });
-  </script>
 </body>
 </html>
