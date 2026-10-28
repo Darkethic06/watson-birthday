@@ -65,9 +65,33 @@
             <span>Watson's Birthday</span>
         </h1>
 
-        <p class="subtitle">
+        <p class="subtitle" id="subtitle">
             A very special day is getting closer... 🎂💕
         </p>
+
+
+        <!-- 3D Cake -->
+        <div class="cake-section">
+
+            <canvas id="cakeCanvas"></canvas>
+
+            <div class="baking-note">
+
+                <p class="baking-title">
+                    👨‍🍳 Your cake is baking...
+                </p>
+
+                <p class="baking-text">
+                    Just taking some time, as I am not a baker 😅
+                </p>
+
+                <div class="baking-bar">
+                    <div class="baking-progress" id="bakingProgress"></div>
+                </div>
+
+            </div>
+
+        </div>
 
 
         <!-- Countdown -->
@@ -163,7 +187,16 @@
     </audio>
 
 
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
     <script src="js/script.js"></script>
+    <script type="module" src="js/cake.js"></script>
 
 </body>
 </html>

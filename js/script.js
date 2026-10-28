@@ -19,6 +19,17 @@ const countdownElement =
 const celebrationElement =
     document.getElementById("birthdayCelebration");
 
+const subtitleElement =
+    document.getElementById("subtitle");
+
+const bakingProgressElement =
+    document.getElementById("bakingProgress");
+
+
+/* Baking bar fills up over the last 30 days */
+
+const bakingWindow = 30 * 24 * 60 * 60 * 1000;
+
 
 /* =========================================
    COUNTDOWN FUNCTION
@@ -84,6 +95,14 @@ function updateCountdown() {
 
 
     /* Update UI */
+
+    subtitleElement.textContent =
+        days === 0
+            ? "Less than a day to go... 🎂💕"
+            : `Only ${days} ${days === 1 ? "day" : "days"} left... 🎂💕`;
+
+    bakingProgressElement.style.width =
+        Math.min(100, Math.max(5, (1 - difference / bakingWindow) * 100)) + "%";
 
     daysElement.textContent =
         String(days).padStart(2, "0");

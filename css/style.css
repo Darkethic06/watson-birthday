@@ -36,7 +36,8 @@ body {
 
     color: #ffffff;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     display: flex;
     justify-content: center;
@@ -166,6 +167,105 @@ h1 span {
     opacity: 0.9;
 
     animation: fadeUp 1.4s ease;
+}
+
+
+/* =========================
+   3D CAKE
+========================= */
+
+.cake-section {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    animation: fadeUp 1.5s ease;
+}
+
+#cakeCanvas {
+
+    width: min(560px, 92vw);
+
+    height: 300px;
+
+    display: block;
+}
+
+.baking-note {
+
+    margin-top: -10px;
+
+    padding: 12px 22px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(12px);
+}
+
+.baking-title {
+
+    font-family: 'Pacifico', cursive;
+
+    font-size: 1.25rem;
+}
+
+.baking-text {
+
+    margin-top: 4px;
+
+    font-size: 0.85rem;
+
+    font-weight: 300;
+
+    opacity: 0.95;
+}
+
+.baking-bar {
+
+    margin-top: 10px;
+
+    height: 8px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    overflow: hidden;
+}
+
+.baking-progress {
+
+    width: 5%;
+
+    height: 100%;
+
+    border-radius: 50px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffffff 0 10px,
+            #ffe3ec 10px 20px
+        );
+
+    background-size: 28px 28px;
+
+    animation: baking-stripes 1s linear infinite;
+
+    transition: width 1s ease;
+}
+
+@keyframes baking-stripes {
+    to { background-position: 28px 0; }
 }
 
 
